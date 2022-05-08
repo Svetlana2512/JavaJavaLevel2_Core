@@ -10,9 +10,9 @@ class Box<T>{
 
 
 
-    void addFruit(T fruit) {
+    void addFruit(T Box) {
         if (currentWeight + 1 <= maxWeight) {
-            arrayList.add(fruit);
+            arrayList.add(Box);
             currentWeight++;
             if (arrayList.size() < 1)
                 isFree = false;
@@ -22,13 +22,13 @@ class Box<T>{
 
 
 
-    float getWeight(Fruit a) {
-        return arrayList.size() * a.weigth;
+    float getWeight(Box a) {
+        return arrayList.size() * arrayList.get(0).weigth;
     }
 
 
 
-    boolean compare(Fruit a1, Fruit a2) {
+    boolean compare(Box a1, Box a2) {
         if (getWeight(a1) == getWeight(a2)) {
             return true;
         } else return false;
