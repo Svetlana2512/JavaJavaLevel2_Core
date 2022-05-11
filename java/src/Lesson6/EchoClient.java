@@ -86,16 +86,16 @@ public class EchoClient extends JFrame {
     }
 
     public void prepareGUI() {
-// Параметры окна
+
         setBounds(600, 300, 500, 500);
         setTitle("Клиент");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-// Текстовое поле для вывода сообщений
+
         chatArea = new JTextArea();
         chatArea.setEditable(false);
         chatArea.setLineWrap(true);
         add(new JScrollPane(chatArea), BorderLayout.CENTER);
-// Нижняя панель с полем для ввода сообщений и кнопкой отправк сообщений
+
         JPanel bottomPanel = new JPanel(new BorderLayout());
         JButton btnSendMsg = new JButton("Отправить");
         bottomPanel.add(btnSendMsg, BorderLayout.EAST);
@@ -113,7 +113,7 @@ public class EchoClient extends JFrame {
                 sendMessage();
             }
         });
-        // Настраиваем действие на закрытие окна
+        
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
